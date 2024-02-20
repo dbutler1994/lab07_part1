@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MyTV</title>
+    <!-- local css file in public directory -->
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <h1> <%= title %> </h1>
+        <p>Web app is built using node, express and mysql to show MY TV shows.</p>
+      </header>
+      <main>
+        <% shows.forEach(show => { %>
+         <p>
+            <%= show.showname %>
+            <span>
+                <a href="/row?tvid=<%= show.id %>">details</a>
+            </span>
+         </p>
+        <% }) %>
+      </main>
+</body>
+</html>
